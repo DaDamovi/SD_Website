@@ -1,0 +1,365 @@
+*{
+    font-family: 'poppins', 'sans-serif';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+.hero{
+    background: #14171a;
+    min-height: 100vh;
+    width: 100%;
+    color: #fff;
+    position: relative;
+}
+
+.separator {
+    background: #14171a;
+    width: auto;
+    height: 50px;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #0a0707;
+    box-shadow: 0 1px 2px #202328;
+    text-align: center;
+    z-index: 69;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 150px;
+}
+
+.nav .logo{
+    width: 140px;
+    margin-left: 82px;
+    cursor: pointer;
+}
+
+.nav ul{
+    flex: 1;
+    margin-left: 100px;
+    text-align: center;
+}
+
+.nav ul li{
+    display: inline-block;
+    list-style: none;
+    width: 150px;
+    padding: 15px;
+    margin: 20px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.active, .nav ul li:hover{
+    background: #14171c;
+    border-radius: 10px;
+}
+
+.text-container {
+    align-items: center;
+    max-width: 2000px;
+    margin-top: -30%;
+    margin-left: 0%;
+}
+
+.text-container h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.text-container p{
+    text-align: center;
+    fontsize: 20px;
+    font-weight: 300;
+    margin-top: 3%;
+}
+
+.btn_collection{
+    text-align: center;
+    margin-left: 40%;
+    margin-top: 7%;
+    background-color: #336565;
+    border-width: 2px;
+    border-style: solid;
+    width: 250px;
+    padding: 12px;
+    border-radius: 20px;
+}
+
+.btn_collection a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 200;
+    margin-top: 20px;
+}
+
+.control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.control .line{
+    width: 1100px;
+    height: 4px;
+    background: white;
+    margin: 0 20px;
+}
+
+.best-products-title{
+    text-align: center;
+    margin-top: -130px;
+}
+
+.best_products_title h1{
+    font-size: 69px;
+}
+
+.best_products_title h2{
+
+    font-size: 16px;
+}
+
+.row1{
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    justify-content: center;
+    background: #efefef;
+    width: 400px;
+    height: 400px;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+.card .image{
+    justify-content: center;
+    background-color: white;
+    height: 200px;
+    width: 300px;
+    margin-top: 9%;
+    margin-left: 9%;
+}
+
+.card .image .lolies {
+    height: 95%;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.card .image .gel {
+    height: 95%;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.card .image .bud {
+    height: 95%;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.card .text{
+    color: darkslategray;
+    margin-top: 5%;
+}
+
+.card .link_lolie{
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 14%;
+    background-color: #d2d2d2;
+    border-width: 2px;
+    border-style: solid;
+    width: 250px;
+    padding: 6px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card .link_lolie a{
+    text-decoration: none;
+    color: darkslategray;
+}
+
+.card .link_gel{
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 14%;
+    background-color: #d2d2d2;
+    border-width: 2px;
+    border-style: solid;
+    width: 250px;
+    padding: 6px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card .link_gel a{
+    text-decoration: none;
+    color: darkslategray;
+}
+
+.card .link_bud{
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 14%;
+    background-color: #d2d2d2;
+    border-width: 2px;
+    border-style: solid;
+    width: 250px;
+    padding: 6px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card .link_bud a{
+    text-decoration: none;
+    color: darkslategray;
+}
+
+.row2{
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    justify-content: center;
+    background: #efefef;
+    width: 400px;
+    height: 400px;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+.card .text{
+    color: darkslategray;
+    margin-top: 5%;
+}
+
+.card .image{
+    justify-content: center;
+    background-color: white;
+    height: 200px;
+    width: 300px;
+    margin-top: 9%;
+    margin-left: 9%;
+}
+
+.card .image .dogtreats {
+    height: 95%;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.card .link_dogtreats{
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 14%;
+    background-color: #d2d2d2;
+    border-width: 2px;
+    border-style: solid;
+    width: 250px;
+    padding: 6px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card .link_dogtreats a{
+    text-decoration: none;
+    color: darkslategray;
+}
+
+
+.card .image .oil {
+    height: 95%;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.card .link_oil{
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 20%;
+    background-color: #d2d2d2;
+    border-width: 2px;
+    border-style: solid;
+    width: 250px;
+    padding: 6px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card .link_oil a{
+    text-decoration: none;
+    color: darkslategray;
+}
+
+.card .image .gummies {
+    height: 95%;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.card .link_gummies{
+    text-align: center;
+    margin-left: 10%;
+    margin-bottom: 100px;
+    background-color: #d2d2d2;
+    border-width: 2px;
+    border-style: solid;
+    width: 250px;
+    padding: 6px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card .link_gummies a{
+    text-decoration: none;
+    color: darkslategray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

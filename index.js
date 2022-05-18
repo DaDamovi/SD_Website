@@ -23,7 +23,8 @@ if (document.readyState == "loading") {
 // Making Function
 function ready() {
 
-    updateTotal()
+    updateTotal();
+    onLoadCartNumbers();
     //Remove Items From Cart
     let removeCartButtons = document.getElementsByClassName("cart-remove");
 
@@ -34,6 +35,7 @@ function ready() {
 
         button.addEventListener('click', removeCartItem)
     }
+
     //Quantity Changes
     let quantityInputs = document.getElementsByClassName('cart-quantity')
 
@@ -41,6 +43,7 @@ function ready() {
         let input = quantityInputs[i]
         input.addEventListener("change", quantityChanged)
     }
+
     // Add To Cart
     let addCart = document.getElementsByClassName("add-cart")
 
@@ -72,7 +75,8 @@ function addCartClicked(event) {
     let productImage = shopProducts.getElementsByClassName ('product_image')[0].src;
 
     addProductToCart (title, price, productImage);
-    updateTotal ()
+    updateCartNumbers();
+    updateTotal();
     return;
 }
 
@@ -81,10 +85,12 @@ function addProductToCart (title, price, productImage) {
     cartShopBox.classList.add("cart-box");
     let cartItems = document.getElementsByClassName ("cart-content")[0];
     let cartItemsNames = cartItems.getElementsByClassName ("cart-product-title");
+    let quantityInputs = document.getElementsByClassName('cart-quantity')
 
     for (let i = 0; i < cartItemsNames.length; i++) {
         if (cartItemsNames[i].innerText === title) {
-            alert("ERROR 420: You have already added this item to your cart");
+            quantityInputs[i].value ++;
+            updateTotal();
             return;
         }
     }
@@ -109,6 +115,7 @@ function addProductToCart (title, price, productImage) {
 function removeCartItem (event) {
     let buttonClicked = event.target;
     buttonClicked.parentElement.remove();
+    updateCartNumbers();
     updateTotal();
 }
 
@@ -119,10 +126,9 @@ function quantityChanged (event) {
     if (isNaN (input.value) || input.value <= 0) {
         input.value = 1
     }
+    updateCartNumbers();
     updateTotal ();
 }
-
-
 
 // Update Total Price
 function updateTotal() {
@@ -142,5 +148,47 @@ function updateTotal() {
     total = Math.round (total * 100) / 100;
 
     document.getElementsByClassName ("total-price")[0].innerText = total + "€";
+}
 
+/*function addCartNumbers() {
+    let cartNumber = document.querySelector(".cartNumber");
+    cartNumber.textContent ++;
+}*/
+
+function updateCartNumbers () {
+    let productNumbers = localStorage.getItem("cartNumbers")
+    productNumbers = parseInt(productNumbers);
+    let cartNumber = document.querySelector(".cartNumber");
+    let cartContent = document.getElementsByClassName ('cart-content')[0];
+    let cartBoxes = cartContent.getElementsByClassName ('cart-box');
+
+    let total = 0;
+
+    for (let i = 0; i < cartBoxes.length; i++) {
+        let cartBox = cartBoxes[i];
+        let quantityElement = cartBox.getElementsByClassName('cart-quantity')[0];
+        let quantity = quantityElement.value;
+        total = total + (1 * quantity)
+    }
+
+    cartNumber.innerText = total;
+
+    /*productNumbers = total;
+    if (productNumbers) {
+        localStorage.setItem("cartNumbers", productNumbers);
+    }
+    else {
+        localStorage.setItem("cartNumbers", 1);
+    }
+
+    cartNumber.innerText = productNumbers;*/
+}
+
+function onLoadCartNumbers () {
+    let productNumbers = localStorage.getItem("cartNumbers")
+    productNumbers = parseInt(productNumbers);
+
+    if (productNumbers) {
+        document.querySelector(".cartNumber").innerText = productNumbers;
+    }
 }

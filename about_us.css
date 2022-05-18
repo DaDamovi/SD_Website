@@ -14,7 +14,7 @@
 
 .hero {
     background: #14171a;
-    min-height: 100vh;
+    min-height: 150vh;
     width: 100%;
     color: #fff;
     position: relative;
@@ -178,6 +178,17 @@ header {
     font-size: 1rem;
 }
 
+.cartNumber {
+    width: 100px;
+    border: 1px solid #008000FF;
+    padding: 4px;
+    color: white;
+    padding-inline: 10px;
+    font-weight: 600;
+
+    margin-left: 10px;
+}
+
 .detail_box{
     display: grid;
     row-gap: 0.5rem;
@@ -214,12 +225,15 @@ header {
 
 .explanation {
     text-align: center;
-    font-size: 20px;
+    width: 70%;
+    font-size: 26px;
     font-weight: 400;
-    margin-top: 5%;
+    padding-top: 100px;
+    margin: auto;
+    line-height: 37px;
 }
 
-.menu_bar{
+.menu_bar {
     /*#007e32*/
     background: rgba(13, 47, 21, 0.78);
     text-align: center;

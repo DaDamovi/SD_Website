@@ -1,5 +1,5 @@
-*{
-    font-family: 'poppins', 'sans-serif';
+* {
+    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -10,9 +10,9 @@
 }
 
 
-.hero{
+.hero {
     background: #14171a;
-    min-height: 100vh;
+    min-height: 150vh;
     width: 100%;
     color: #fff;
     position: relative;
@@ -24,7 +24,7 @@
     height: 50px;
 }
 
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -35,7 +35,7 @@ header{
     z-index: 69;
 }
 
-.nav{
+.nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -43,34 +43,34 @@ header{
     height: 150px;
 }
 
-.nav .logo{
+.nav .logo {
     width: 140px;
     margin-left: 82px;
     cursor: pointer;
 }
 
-.nav ul{
+.nav ul {
     flex: 1;
     margin-left: 100px;
     text-align: center;
 }
 
-.nav ul li{
+.nav ul li {
     display: inline-block;
     list-style: none;
-    width: 150px;
+    width: 180px;
     padding: 15px;
     margin: 20px;
     font-size: 22px;
     cursor: pointer;
 }
 
-.nav ul li a{
+.nav ul li a {
     text-decoration: none;
     color: white;
 }
 
-.active, .nav ul li:hover{
+.active, .nav ul li:hover {
     background: #14171c;
     border-radius: 10px;
 }

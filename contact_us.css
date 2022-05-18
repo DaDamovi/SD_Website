@@ -1,7 +1,5 @@
-
-
 * {
-    font-family: 'poppins', 'sans-serif';
+    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -14,7 +12,7 @@
 
 .hero {
     background: #14171a;
-    min-height: 100vh;
+    min-height: 200vh;
     width: 100%;
     color: #fff;
     position: relative;
@@ -60,7 +58,7 @@ header {
 .nav ul li {
     display: inline-block;
     list-style: none;
-    width: 150px;
+    width: 180px;
     padding: 15px;
     margin: 20px;
     font-size: 22px;
@@ -70,6 +68,7 @@ header {
 .nav ul li a {
     text-decoration: none;
     color: white;
+    font-family: "BRF", sans-serif;
 }
 
 .active, .nav ul li:hover {
@@ -178,6 +177,17 @@ header {
     font-size: 1rem;
 }
 
+.cartNumber {
+    width: 100px;
+    border: 1px solid #008000FF;
+    padding: 4px;
+    color: white;
+    padding-inline: 10px;
+    font-weight: 600;
+
+    margin-left: 10px;
+}
+
 .detail_box{
     display: grid;
     row-gap: 0.5rem;
@@ -213,54 +223,127 @@ header {
 }
 
 .content-container {
-    display: flex;
+    display: inline-flex;
     list-style: none;
-    padding: 15px;
-    margin: 20px;
-    align-items: center;
+    margin-left: 50px;
+    margin-right: 33px;
     justify-content: space-between;
     text-align: center;
 }
 
-.open_hours {
-    font-size: 30px;
-    display: inline-block;
-}
 
 .time-container {
     text-align: center;
     width: 400px;
     font-size: 18px;
-    background: rgba(20, 23, 26, 0.72);
-    margin-top: 20px;
+    color: #14171c;
+    margin-top: 40px;
+    font-weight: 500;
     margin-left: 60px;
-    border: solid #14171a;
+    border: solid #202d38;
+    background-image: url("Images/wood.jpeg");
 }
 
 i.bx.bx-time-five {
-    width: 200px;
-    font-size: 20px;
-    font-weight: 420;
-    text-decoration: underline;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.week-container {
+    margin-top: 15px;
+    font-weight: 900;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+.saturday-container {
+    margin-top: 15px;
+    font-weight: 900;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.sunday-container {
+    margin-top: 15px;
+    font-weight: 900;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 .contact-container {
     text-align: center;
     display: inline-block;
     width: 400px;
+    height: 300px;
     margin-top: 20px;
-    margin-left: 30px;
     padding: 5px;
     border: 2px #060707;
     font-size: 20px;
     font-weight: 400;
 }
 
-.google_maps {
-    display: grid;
-    width: 420px;
-    height: 240px;
-    margin-right: 60px;
+.time-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.time-line .line{
+    width: 200px;
+    height: 3px;
+    background: #14171c;
+    margin: 0 20px;
+}
+
+i.bx.bx-chat {
+    font-size: 40px;
+}
+
+i.bx.bx-phone-call {
+    margin-top: 30px;
+}
+
+.number {
+    margin-top: 15px;
+    font-weight: 900;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.contact-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.contact-line .line{
+    width: 200px;
+    height: 3px;
+    background: #14171c;
+    margin: 0 20px;
+}
+
+i.bx.bx-envelope {
+    margin-top: 30px;
+}
+
+.email {
+    margin-top: 15px;
+    font-weight: 900;
+    text-decoration: underline;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.maps-container {
+    margin-top: -20px;
+    margin-left: 10px;
+}
+
+i.bx.bxs-map {
+    padding: 20px;
+    border: 1px double white;
+    border-radius: 20px;
+    margin-top: 60px;
+    font-size: 40px;
+    margin-bottom: 70px;
 }
 
 .menu_bar {

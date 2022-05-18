@@ -1,7 +1,5 @@
-
-
 * {
-    font-family: 'poppins', 'sans-serif';
+    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -14,7 +12,7 @@
 
 .hero {
     background: #14171a;
-    min-height: 100vh;
+    min-height: 150vh;
     width: 100%;
     color: #fff;
     position: relative;
@@ -60,7 +58,7 @@ header {
 .nav ul li {
     display: inline-block;
     list-style: none;
-    width: 150px;
+    width: 180px;
     padding: 15px;
     margin: 20px;
     font-size: 22px;
@@ -162,7 +160,7 @@ header {
     background: #008000FF;
 }
 
-#close-cart{
+#close-cart {
     position: absolute;
     top: 1rem;
     right: 0.8rem;
@@ -170,7 +168,7 @@ header {
     cursor: pointer;
 }
 
-.cart-quantity{
+.cart-quantity {
     border: 1px solid cadetblue;
     outline-color: #007e32;
     width: 2.4rem;
@@ -178,7 +176,18 @@ header {
     font-size: 1rem;
 }
 
-.detail_box{
+.cartNumber {
+    width: 100px;
+    border: 1px solid #008000FF;
+    padding: 4px;
+    color: white;
+    padding-inline: 10px;
+    font-weight: 600;
+
+    margin-left: 10px;
+}
+
+.detail_box {
     display: grid;
     row-gap: 0.5rem;
 }
@@ -224,8 +233,8 @@ header {
     background: rgba(13, 47, 21, 0.78);
     text-align: center;
     margin: auto;
-    width: 1000px;
-    height: 65px;
+    width: 1100px;
+    height: 90px;
     margin-top: 40px;
     border-radius: 5px;
     text-align: center;
@@ -236,28 +245,60 @@ header {
     list-style: none;
     display: inline-flex;
     color: ghostwhite;
-    margin-top: 5px;
 }
 
 .menu_bar ul li{
-    margin-top: 3px;
-    width: 210px;
-    height: 50px;
-    padding: 13px;
+    margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
 }
+
+.flower {
+    width: 130px;
+    height: 50px;
+    font-weight: 700;
+    padding-top: 14px;
+}
+
+
+.vape {
+    width: 120px;
+    height: 50px;
+    font-weight: 700;
+    padding-top: 14px;
+}
+
+.cosmetics {
+    width: 170px;
+    height: 50px;
+    font-weight: 700;
+    padding-top: 14px;
+}
+
+.fisiotherapy {
+    width: 190px;
+    height: 50px;
+    font-weight: 700;
+    padding-top: 14px;
+}
+
+.smoking-accessories {
+    width: 260px;
+    height: 50px;
+    font-weight: 700;
+    padding-top: 14px;
+}
+
 
 .menu_bar ul li a{
     text-decoration: none;
     color: #ffffff;
     font-family: 'Verdana';
     font-size: larger;
-    text-align: center;
-
 }
 
-.menu_bar ul li:hover{
+
+.menu_bar ul li:hover {
     background: #1c482c;
     border-radius: 10px;
     cursor: pointer;
@@ -275,12 +316,12 @@ header {
     position:absolute;
     background: #006527;
     margin-top: 10px;
-    margin-left: -5px;
+    margin-left: 33px;
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
     width: 200px;
-    height: 412px;
+    height: 450px;
 }
 
 .menu_bar ul li:hover .sub_menu ul{
@@ -290,7 +331,9 @@ header {
 
 .menu_bar ul li:hover .sub_menu ul li{
     width: 150px;
-    margin-top: 15px;
+    height: 50px;
+    margin-top: 20px;
+    padding-top: 13px;
     font-weight: 1000;
     border-bottom: 1px solid #ffffff;
 }
@@ -302,7 +345,6 @@ header {
 .sub_menu ul li:hover{
     background: #008c38;
     border-radius: 10px;
-
 }
 
 /*Shop Content*/
@@ -410,7 +452,7 @@ img{
     }
 
     .cart {
-        width: 280pxpx;
+        width: 280px;
     }
 }
 

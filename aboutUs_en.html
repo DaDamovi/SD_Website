@@ -1,78 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>SD About Us</title>
-    <link rel="stylesheet" href="about_us.css">
+    <link rel="stylesheet" href="aboutUs_en.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 
-
 <body>
-
 <div class = "hero">
 
     <header>
-
         <div class="nav container">
 
-            <a href="index.html">
-
-                <img src="images/logo.gif" class="logo">
-
+            <a href="home_en.html">
+                <img src="/Images/logo.gif" class="logo">
             </a>
 
             <ul>
-
-                <li><a href="store.html">Store</a> </li>
-                <li><a href="about_us.html">About Us</a> </li>
-                <li><a href="contact_us.html">Contact Us</a> </li>
+                <li><a href="store_en.html">Store</a> </li>
+                <li><a href="aboutUs_en.html">About Us</a> </li>
+                <li><a href="contactUs_en.html">Contact Us</a> </li>
                 <li class="active" > <i class="fa-solid fa-cart-shopping"></i> Cart <span class = "cartNumber">0</span></li>
-
             </ul>
 
             <div class="cart">
+                <h2 class="cart_title">Your Cart</h2>
 
-                <h2 class="cart-title">Your Cart</h2>
-
-                <div class="cart-content">
-
-                </div>
+                <div class="cart_content"></div>
 
                 <div class="total">
-
                     <div class="total-title">Total</div>
                     <div class="total-price">0€</div>
-
                 </div>
 
-                <button  type = "button" class = "button-buy" >Buy Now</button>
+                <button type = "button" class = "button-buy">Buy Now</button>
 
                 <i class = 'bx bx-x' id = "close-cart" ></i>
 
             </div>
         </div>
 
-        <script type = "text/javascript" src = "about_us.js" ></script>
-
+        <script type = "text/javascript" src = "/script.js" ></script>
     </header>
 
-
-
-    <section class = "separator">
+    <div class = "separator">
         <div class = "lang-menu">
-            <div class = "selected-lang">
-                Spanish
-            </div>
+            <div class = "selected-lang">English</div>
             <ul>
-                <li><a class = "us">English</a></li>
+                <li><a href ="aboutUs_es.html" class = "us"> Spanish</a></li>
 
-                <li ><a class = "cat">Català</a></li>
+                <li ><a href ="aboutUs_cat.html" class = "cat"> Catalan</a></li>
             </ul>
         </div>
-    </section>
+    </div>
+    <!-- Common for all -->
 
 
     <section class = "text-container">

@@ -1,3 +1,4 @@
+/* -- START OF COMMON TO ALL -- */
 * {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
@@ -11,16 +12,10 @@
 
 .hero {
     background: #14171a;
-    min-height: 150vh;
+    min-height: 200vh;
     width: 100%;
     color: #fff;
     position: relative;
-}
-
-.separator {
-    background: #14171a;
-    width: auto;
-    height: 50px;
 }
 
 header {
@@ -189,13 +184,22 @@ header {
 /* LANGUAGE DROP-DOWN */
 .separator {
     background: #14171a;
+    position: relative;
     width: 100%;
-    height: 600px;
+    height: 190px;
 }
+
+.lang-menu {
+    display: block;
+    width: 100px;
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+}
+
 .selected-lang {
     cursor: pointer;
     display: flex;
-    justify-content: space-between;
     line-height: 1.2;
     width: 100px;
     height: 180px;
@@ -207,13 +211,8 @@ header {
     display: block;
     width: 25px;
     height: 16px;
-    background-image: url("../Images/spain.svg");
-}
-
-.lang-menu {
-    display: block;
-    position: absolute;
-    width: 300px;
+    background-image: url("/Images/cat.svg");
+    margin-right: 10px;
 }
 
 .lang-menu ul {
@@ -223,7 +222,7 @@ header {
     width: 120px;
     height: 60px;
     margin-right: 100px;
-    display: block;
+    display: none;
     position: absolute;
 }
 
@@ -239,6 +238,7 @@ header {
 }
 .lang-menu ul li a {
     width: 125px;
+    color: inherit;
     display: block;
     padding: 5px 10px;
 }
@@ -252,23 +252,24 @@ header {
     margin-right: 5px;
 }
 
-
 .lang-menu ul li:hover {
     background-color: #a86666;
     cursor: pointer;
 }
 
 .us:before {
-    background-image: url("../Images/us.svg");
+    background-image: url("/Images/us.svg");
 }
 
-.cat:before {
-    background-image: url("../Images/cat.svg");
+.es:before {
+    background-image: url("/Images/spain.svg");
 }
+/* -- END OF COMMON TO ALL -- */
 
+/* Unique for CONTACT US */
 .text-container {
     align-items: center;
-    margin-top: -62px;
+    margin-top: -180px;
     max-width: 2000px;
     margin-left: 0%;
     height: available;
@@ -279,13 +280,6 @@ header {
     font-size: 80px;
     font-weight: 400;
     margin-top: 230px;
-}
-
-.text-container h2{
-    text-align: center;
-    font-size: 20px;
-    font-weight: 40;
-    margin-top: 2%;
 }
 
 .control {
@@ -302,189 +296,128 @@ header {
     margin: 0 20px;
 }
 
-.menu_bar{
-    /*#007e32*/
-    background: rgba(13, 47, 21, 0.78);
-    text-align: center;
-    margin: auto;
-    width: 1100px;
-    height: 90px;
-    margin-top: 40px;
-    border-radius: 5px;
-    text-align: center;
-    z-index: 10;
-}
-
-.menu_bar ul{
-    list-style: none;
+.content-container {
     display: inline-flex;
-    color: ghostwhite;
-}
-
-.menu_bar ul li{
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.flower {
-    width: 130px;
-    height: 50px;
-    font-weight: 700;
-    padding-top: 14px;
-}
-
-
-.vape {
-    width: 120px;
-    height: 50px;
-    font-weight: 700;
-    padding-top: 14px;
-}
-
-.cosmetics {
-    width: 170px;
-    height: 50px;
-    font-weight: 700;
-    padding-top: 14px;
-}
-
-.fisiotherapy {
-    width: 190px;
-    height: 50px;
-    font-weight: 700;
-    padding-top: 14px;
-}
-
-.smoking-accessories {
-    width: 260px;
-    height: 50px;
-    font-weight: 700;
-    padding-top: 14px;
-}
-
-
-.menu_bar ul li a{
-    text-decoration: none;
-    color: #ffffff;
-    font-family: 'Verdana';
-    font-size: larger;
-}
-
-
-.menu_bar ul li:hover {
-    background: #1c482c;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.sub_menu{
-    display: none;
+    list-style: none;
+    margin-left: 50px;
+    margin-right: 33px;
+    justify-content: space-between;
     text-align: center;
-    z-index: 2;
-    position:relative;
 }
 
-.menu_bar ul li:hover .sub_menu{
-    display: block;
-    position:absolute;
-    background: #006527;
-    margin-top: 10px;
-    margin-left: 33px;
-    border-radius: 10px;
-    border-width: 2px;
-    border-style: solid;
-    width: 200px;
-    height: 450px;
+
+.time-container {
+    text-align: center;
+    width: 400px;
+    font-size: 18px;
+    color: #14171c;
+    margin-top: 40px;
+    font-weight: 500;
+    margin-left: 60px;
+    border: solid #202d38;
+    background-image: url("Images/wood.jpeg");
 }
 
-.menu_bar ul li:hover .sub_menu ul{
-    display: block;
-    margin-left: 5px;
-}
-
-.menu_bar ul li:hover .sub_menu ul li{
-    width: 150px;
-    height: 50px;
-    margin-top: 20px;
-    padding-top: 13px;
-    font-weight: 1000;
-    border-bottom: 1px solid #ffffff;
-}
-
-.menu_bar ul li:hover .sub_menu ul li:last-child{
-    border-bottom: none;
-}
-
-.sub_menu ul li:hover{
-    background: #008c38;
-    border-radius: 10px;
-}
-
-/*Shop Content*/
-
-.section {
-    padding: 4rem 0 3rem;
-}
-
-img{
-    width: 100%;
-}
-
-.shop_container{
-    max-width: 1068px;
-    margin: auto;
-    width: 100%;
-    margin-top: 80px;
-}
-
-.shop_content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
-    gap: 1.5rem;
-}
-
-.product_box{
-    position: relative;
-}
-
-.product_box:hover{
-    padding: 10px;
-    border: 1px solid whitesmoke;
-    transition: 0.4s;
-    border-radius: 5px;
-}
-
-.product_image{
-    width: 100%;
-    height: auto;
-    margin-bottom: 0.5rem;
-}
-
-.product_title{
-    font-size: 1.1rem;
+i.bx.bx-time-five {
+    font-size: 40px;
     font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
+    margin-top: 15px;
 }
 
-.price{
-    font-weight: 500 ;
+.week-container {
+    margin-top: 15px;
+    font-weight: 900;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+.saturday-container {
+    margin-top: 15px;
+    font-weight: 900;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
-.add-cart{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background: darkgreen;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 60px;
+.sunday-container {
+    margin-top: 15px;
+    font-weight: 900;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
-.add-cart:hover{
-    background: #0a9b0a;
+.contact-container {
+    text-align: center;
+    display: inline-block;
+    width: 400px;
+    height: 300px;
+    margin-top: 20px;
+    padding: 5px;
+    border: 2px #060707;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.time-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.time-line .line{
+    width: 200px;
+    height: 3px;
+    background: #14171c;
+    margin: 0 20px;
+}
+
+i.bx.bx-chat {
+    font-size: 40px;
+}
+
+i.bx.bx-phone-call {
+    margin-top: 30px;
+}
+
+.number {
+    margin-top: 15px;
+    font-weight: 900;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.contact-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.contact-line .line{
+    width: 200px;
+    height: 3px;
+    background: #14171c;
+    margin: 0 20px;
+}
+
+i.bx.bx-envelope {
+    margin-top: 30px;
+}
+
+.email {
+    margin-top: 15px;
+    font-weight: 900;
+    text-decoration: underline;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.maps-container {
+    margin-top: -20px;
+    margin-left: 10px;
+}
+
+i.bx.bxs-map {
+    padding: 20px;
+    border: 1px double white;
+    border-radius: 20px;
+    margin-top: 60px;
+    font-size: 40px;
+    margin-bottom: 70px;
 }
 
 @media (max-width: 1080px) {
@@ -529,10 +462,3 @@ img{
         width: 280px;
     }
 }
-
-
-
-
-
-
-

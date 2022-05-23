@@ -37,7 +37,7 @@ function ready() {
     }
 
     //Quantity Changes
-    let quantityInputs = document.getElementsByClassName('cart-quantity')
+    let quantityInputs = document.getElementsByClassName('cartNumber')
 
     for (let i = 0; i < quantityInputs.length; i++) {
         let input = quantityInputs[i]

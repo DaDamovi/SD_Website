@@ -1,3 +1,4 @@
+/* -- START OF COMMON TO ALL -- */
 * {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
@@ -15,12 +16,6 @@
     width: 100%;
     color: #fff;
     position: relative;
-}
-
-.separator {
-    background: #14171a;
-    width: auto;
-    height: 50px;
 }
 
 header {
@@ -67,7 +62,6 @@ header {
 .nav ul li a {
     text-decoration: none;
     color: white;
-    font-family: "BRF", sans-serif;
 }
 
 .active, .nav ul li:hover {
@@ -126,14 +120,14 @@ header {
     margin-right: 70px;
 }
 
-.total {
+.total{
     display: flex;
     justify-content: flex-end;
     margin-top: 1.5rem;
     border-top: 1px solid green;
 }
 
-.total-title {
+.total-title{
     fontsize: 1rem;
     margin-top: 5px;
     font-weight: 600;
@@ -160,7 +154,7 @@ header {
     background: #008000FF;
 }
 
-#close-cart{
+#close-cart {
     position: absolute;
     top: 1rem;
     right: 0.8rem;
@@ -168,7 +162,7 @@ header {
     cursor: pointer;
 }
 
-.cart-quantity{
+.cart-quantity {
     border: 1px solid cadetblue;
     outline-color: #007e32;
     width: 2.4rem;
@@ -187,15 +181,25 @@ header {
     margin-left: 10px;
 }
 
+/* LANGUAGE DROP-DOWN */
 .separator {
     background: #14171a;
-    width: auto;
-    height: 50px;
+    position: relative;
+    width: 100%;
+    height: 190px;
 }
+
+.lang-menu {
+    display: block;
+    width: 100px;
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+}
+
 .selected-lang {
     cursor: pointer;
     display: flex;
-    justify-content: space-between;
     line-height: 1.2;
     width: 100px;
     height: 180px;
@@ -205,15 +209,10 @@ header {
 .selected-lang:before {
     content: '';
     display: block;
-    width: 25px;
+    width: 21px;
     height: 16px;
-    background-image: url("../Images/spain.svg");
-}
-
-.lang-menu {
-    display: block;
-    position: absolute;
-    width: 300px;
+    background-image: url("/Images/us.svg");
+    margin-right: 10px;
 }
 
 .lang-menu ul {
@@ -223,7 +222,7 @@ header {
     width: 120px;
     height: 60px;
     margin-right: 100px;
-    display: block;
+    display: none;
     position: absolute;
 }
 
@@ -239,6 +238,7 @@ header {
 }
 .lang-menu ul li a {
     width: 125px;
+    color: inherit;
     display: block;
     padding: 5px 10px;
 }
@@ -252,23 +252,24 @@ header {
     margin-right: 5px;
 }
 
-
 .lang-menu ul li:hover {
     background-color: #a86666;
     cursor: pointer;
 }
 
 .us:before {
-    background-image: url("../Images/us.svg");
+    background-image: url("/Images/spain.svg");
 }
 
 .cat:before {
-    background-image: url("../Images/cat.svg");
+    background-image: url("/Images/cat.svg");
 }
+/* -- END OF COMMON TO ALL -- */
 
+/* Unique for CONTACT US */
 .text-container {
     align-items: center;
-    margin-top: -62px;
+    margin-top: -180px;
     max-width: 2000px;
     margin-left: 0%;
     height: available;
@@ -314,7 +315,7 @@ header {
     font-weight: 500;
     margin-left: 60px;
     border: solid #202d38;
-    background-image: url("../Images/wood.jpeg");
+    background-image: url("Images/wood.jpeg");
 }
 
 i.bx.bx-time-five {
@@ -419,158 +420,6 @@ i.bx.bxs-map {
     margin-bottom: 70px;
 }
 
-.menu_bar {
-    /*#007e32*/
-    background: rgba(13, 47, 21, 0.78);
-    text-align: center;
-    margin: auto;
-    width: 1000px;
-    height: 65px;
-    margin-top: 40px;
-    border-radius: 5px;
-    text-align: center;
-    z-index: 10;
-}
-
-.menu_bar ul{
-    list-style: none;
-    display: inline-flex;
-    color: ghostwhite;
-    margin-top: 5px;
-}
-
-.menu_bar ul li{
-    margin-top: 3px;
-    width: 210px;
-    height: 50px;
-    padding: 13px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.menu_bar ul li a{
-    text-decoration: none;
-    color: #ffffff;
-    font-family: 'Verdana';
-    font-size: larger;
-    text-align: center;
-
-}
-
-.menu_bar ul li:hover{
-    background: #1c482c;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.sub_menu{
-    display: none;
-    text-align: center;
-    z-index: 2;
-    position:relative;
-}
-
-.menu_bar ul li:hover .sub_menu{
-    display: block;
-    position:absolute;
-    background: #006527;
-    margin-top: 10px;
-    margin-left: -5px;
-    border-radius: 10px;
-    border-width: 2px;
-    border-style: solid;
-    width: 200px;
-    height: 412px;
-}
-
-.menu_bar ul li:hover .sub_menu ul{
-    display: block;
-    margin-left: 5px;
-}
-
-.menu_bar ul li:hover .sub_menu ul li{
-    width: 150px;
-    margin-top: 15px;
-    font-weight: 1000;
-    border-bottom: 1px solid #ffffff;
-}
-
-.menu_bar ul li:hover .sub_menu ul li:last-child{
-    border-bottom: none;
-}
-
-.sub_menu ul li:hover{
-    background: #008c38;
-    border-radius: 10px;
-
-}
-
-/*Shop Content*/
-
-.section {
-    padding: 4rem 0 3rem;
-}
-
-img{
-    width: 100%;
-}
-
-.shop_container{
-    max-width: 1068px;
-    margin: auto;
-    width: 100%;
-    margin-top: 80px;
-}
-
-.shop_content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
-    gap: 1.5rem;
-}
-
-.product_box{
-    position: relative;
-}
-
-.product_box:hover{
-    padding: 10px;
-    border: 1px solid whitesmoke;
-    transition: 0.4s;
-    border-radius: 5px;
-}
-
-.product_image{
-    width: 100%;
-    height: auto;
-    margin-bottom: 0.5rem;
-}
-
-.product_title{
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-}
-
-.price{
-    font-weight: 500 ;
-}
-
-.add-cart{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background: darkgreen;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 60px;
-}
-
-.add-cart:hover{
-    background: #0a9b0a;
-}
-
 @media (max-width: 1080px) {
     .nav {
         padding: 15px;
@@ -613,10 +462,3 @@ img{
         width: 280px;
     }
 }
-
-
-
-
-
-
-

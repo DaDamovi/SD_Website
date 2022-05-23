@@ -1,0 +1,530 @@
+/* -- START OF COMMON TO ALL -- */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+.hero {
+    background: #14171a;
+    min-height: 150vh;
+    width: 100%;
+    color: #fff;
+    position: relative;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #0a0707;
+    box-shadow: 0 1px 2px #202328;
+    text-align: center;
+    z-index: 69;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 150px;
+}
+
+.nav .logo {
+    width: 140px;
+    margin-left: 82px;
+    cursor: pointer;
+}
+
+.nav ul {
+    flex: 1;
+    margin-left: 100px;
+    text-align: center;
+}
+
+.nav ul li {
+    display: inline-block;
+    list-style: none;
+    width: 180px;
+    padding: 15px;
+    margin: 20px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.active, .nav ul li:hover {
+    background: #14171c;
+    border-radius: 10px;
+}
+
+.cart{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    min-height: 100vh;
+    padding: 20px;
+    background: #9ea9a0;
+    box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+    transition: 0.4s;
+}
+
+.cart.active{
+    right: 0;
+}
+
+.cart-product-title {
+    text-align: left;
+    fontsize: 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cart-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.cart-product-price{
+    text-align: left;
+    font-weight: 500;
+}
+
+.cart-remove{
+    font-size: 24px;
+    color: darkred;
+    cursor: pointer;
+    margin-right: 70px;
+}
+
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid green;
+}
+
+.total-title{
+    fontsize: 1rem;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.total-price{
+    margin-top: 5px;
+    margin-left: 0.5rem;
+}
+
+.button-buy{
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: #d51515;
+    color: white;
+    fontsize: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.button-buy:hover{
+    background: #008000FF;
+}
+
+#close-cart {
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.cart-quantity {
+    border: 1px solid cadetblue;
+    outline-color: #007e32;
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.cartNumber {
+    width: 100px;
+    border: 1px solid #008000FF;
+    padding: 4px;
+    color: white;
+    padding-inline: 10px;
+    font-weight: 600;
+
+    margin-left: 10px;
+}
+
+/* LANGUAGE DROP-DOWN */
+.separator {
+    background: #14171a;
+    position: relative;
+    width: 100%;
+    height: 190px;
+}
+
+.lang-menu {
+    display: block;
+    width: 100px;
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+}
+
+.selected-lang {
+    cursor: pointer;
+    display: flex;
+    line-height: 1.2;
+    width: 120px;
+    height: 180px;
+    padding-top: 150px;
+}
+
+.selected-lang:before {
+    content: '';
+    display: block;
+    width: 23px;
+    height: 16px;
+    background-image: url("/Images/spain.svg");
+    margin-right: 10px;
+}
+
+.lang-menu ul {
+    color: white;
+    background-color: #14161a;
+    box-shadow: 0px 1px 10px rgb(54, 121, 91);
+    width: 120px;
+    height: 60px;
+    margin-right: 100px;
+    display: none;
+    position: absolute;
+}
+
+.lang-menu:hover ul {
+    display: block;
+}
+
+.lang menu ul li {
+    list-style: none;
+    width: 150px;
+    height: 300px;
+    padding-top: 30px;
+}
+.lang-menu ul li a {
+    width: 125px;
+    display: block;
+    color: inherit;
+    padding: 5px 10px;
+}
+
+.lang-menu ul li a:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.lang-menu ul li:hover {
+    background-color: #a86666;
+    cursor: pointer;
+}
+
+.us:before {
+    background-image: url("/Images/us.svg");
+}
+
+.cat:before {
+    background-image: url("/Images/cat.svg");
+}
+/* -- END OF COMMON TO ALL -- */
+
+/* -- UNIQUE STORE -- */
+.text-container {
+    align-items: center;
+    margin-top: -180px;
+    height: available;
+}
+
+.text-container h1 {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 400;
+    margin-top: 230px;
+}
+
+.text-container h2{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 40;
+    margin-top: 2%;
+}
+
+.control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.control .line{
+    width: 1100px;
+    height: 4px;
+    background: white;
+    margin: 0 20px;
+}
+
+.menu_bar{
+    /*#007e32*/
+    background: rgba(13, 47, 21, 0.78);
+    text-align: center;
+    margin: auto;
+    width: 1100px;
+    height: 90px;
+    margin-top: 40px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 10;
+}
+
+.menu_bar ul{
+    list-style: none;
+    display: inline-flex;
+    color: ghostwhite;
+}
+
+.menu_bar ul li{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.flower {
+    width: 130px;
+    height: 50px;
+    font-weight: 700;
+    padding-top: 14px;
+}
+
+
+.vape {
+    width: 120px;
+    height: 50px;
+    font-weight: 700;
+    padding-top: 14px;
+}
+
+.cosmetics {
+    width: 170px;
+    height: 50px;
+    font-weight: 700;
+    padding-top: 14px;
+}
+
+.fisiotherapy {
+    width: 190px;
+    height: 50px;
+    font-weight: 700;
+    padding-top: 14px;
+}
+
+.smoking-accessories {
+    width: 260px;
+    height: 50px;
+    font-weight: 700;
+    padding-top: 14px;
+}
+
+
+.menu_bar ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Verdana';
+    font-size: larger;
+}
+
+
+.menu_bar ul li:hover {
+    background: #1c482c;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.sub_menu{
+    display: none;
+    text-align: center;
+    z-index: 2;
+    position:relative;
+}
+
+.menu_bar ul li:hover .sub_menu{
+    display: block;
+    position:absolute;
+    background: #006527;
+    margin-top: 10px;
+    margin-left: 33px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    width: 200px;
+    height: 450px;
+}
+
+.menu_bar ul li:hover .sub_menu ul{
+    display: block;
+    margin-left: 5px;
+}
+
+.menu_bar ul li:hover .sub_menu ul li{
+    width: 150px;
+    height: 50px;
+    margin-top: 20px;
+    padding-top: 13px;
+    font-weight: 1000;
+    border-bottom: 1px solid #ffffff;
+}
+
+.menu_bar ul li:hover .sub_menu ul li:last-child{
+    border-bottom: none;
+}
+
+.sub_menu ul li:hover{
+    background: #008c38;
+    border-radius: 10px;
+}
+
+/*Shop Content*/
+
+.section {
+    padding: 4rem 0 3rem;
+}
+
+img{
+    width: 100%;
+}
+
+.shop_container{
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.shop_content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1.5rem;
+}
+
+.product_box{
+    position: relative;
+}
+
+.product_box:hover{
+    padding: 10px;
+    border: 1px solid whitesmoke;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+
+.product_image{
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.product_title{
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.price{
+    font-weight: 500 ;
+}
+
+.add-cart{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: darkgreen;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 60px;
+}
+
+.add-cart:hover{
+    background: #0a9b0a;
+}
+
+@media (max-width: 1080px) {
+    .nav {
+        padding: 15px;
+    }
+
+    section {
+        padding: 3rem 0 2rem;
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .shop {
+        margin-top: 2rem !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav {
+        padding: 11px;
+    }
+
+    .nav .logo {
+        width: 100px;
+    }
+
+    .nav ul li a  {
+        width: 320px;
+    }
+}
+
+@media (max-width: 400px) {
+    .shop {
+        margin-top: 1rem !important;
+    }
+
+    .cart {
+        width: 280px;
+    }
+}

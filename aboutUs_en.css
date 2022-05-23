@@ -12,7 +12,7 @@
 
 .hero {
     background: #14171a;
-    min-height: 150vh;
+    min-height: 200vh;
     width: 100%;
     color: #fff;
     position: relative;
@@ -200,7 +200,6 @@ header {
 .selected-lang {
     cursor: pointer;
     display: flex;
-    justify-content: space-between;
     line-height: 1.2;
     width: 100px;
     height: 180px;
@@ -210,9 +209,10 @@ header {
 .selected-lang:before {
     content: '';
     display: block;
-    width: 25px;
+    width: 21px;
     height: 16px;
-    background-image: url("/Images/spain.svg");
+    background-image: url("/Images/us.svg");
+    margin-right: 10px;
 }
 
 .lang-menu ul {
@@ -238,6 +238,7 @@ header {
 }
 .lang-menu ul li a {
     width: 125px;
+    color: inherit;
     display: block;
     padding: 5px 10px;
 }
@@ -257,7 +258,7 @@ header {
 }
 
 .us:before {
-    background-image: url("/Images/us.svg");
+    background-image: url("/Images/spain.svg");
 }
 
 .cat:before {
@@ -265,50 +266,28 @@ header {
 }
 /* -- END OF COMMON TO ALL -- */
 
-/* SLOGAN */
+/* MAIN TEXT */
 .text-container {
     align-items: center;
+    margin-top: -180px;
     max-width: 2000px;
+    margin-left: 0%;
+    height: available;
 }
 
 .text-container h1 {
     text-align: center;
-    font-size: 50px;
+    font-size: 80px;
     font-weight: 400;
+    margin-top: 230px;
 }
 
-.text-container p{
-    text-align: center;
-    fontsize: 20px;
-    font-weight: 300;
-    margin-top: 3%;
-}
-
-.btn_collection{
-    text-align: center;
-    margin-left: 40%;
-    margin-top: 7%;
-    background-color: #336565;
-    border-width: 2px;
-    border-style: solid;
-    width: 250px;
-    padding: 12px;
-    border-radius: 20px;
-}
-
-.btn_collection a{
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 200;
-    margin-top: 20px;
-}
-
+/* SEPARATING LINE */
 .control {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 40px;
 }
 
 .control .line{
@@ -318,220 +297,18 @@ header {
     margin: 0 20px;
 }
 
-.best-products-title{
+/* BODY TEXT */
+.explanation {
     text-align: center;
-    margin-top: 100px;
+    width: 70%;
+    font-size: 26px;
+    font-weight: 400;
+    padding-top: 100px;
+    margin: auto;
+    line-height: 37px;
 }
 
-.best_products_title h1{
-    font-size: 69px;
-}
-
-.best_products_title h2{
-    font-size: 16px;
-}
-
-.row1{
-    display: flex;
-    justify-content: center;
-}
-
-.card{
-    justify-content: center;
-    background: #efefef;
-    width: 400px;
-    height: 400px;
-    margin: 30px;
-    border-radius: 10px;
-}
-
-.card .image{
-    justify-content: center;
-    background-color: white;
-    height: 200px;
-    width: 300px;
-    margin-top: 9%;
-    margin-left: 9%;
-}
-
-.card .image .lolies {
-    height: 95%;
-    width: 60%;
-    margin-left: 20%;
-}
-
-.card .image .gel {
-    height: 95%;
-    width: 60%;
-    margin-left: 20%;
-}
-
-.card .image .bud {
-    height: 95%;
-    width: 60%;
-    margin-left: 20%;
-}
-
-.card .text{
-    color: darkslategray;
-    margin-top: 5%;
-}
-
-.card .link_lolie{
-    text-align: center;
-    margin-left: 10%;
-    margin-top: 14%;
-    background-color: #d2d2d2;
-    border-width: 2px;
-    border-style: solid;
-    width: 250px;
-    padding: 6px;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.card .link_lolie a{
-    text-decoration: none;
-    color: darkslategray;
-}
-
-.card .link_gel{
-    text-align: center;
-    margin-left: 10%;
-    margin-top: 14%;
-    background-color: #d2d2d2;
-    border-width: 2px;
-    border-style: solid;
-    width: 250px;
-    padding: 6px;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.card .link_gel a{
-    text-decoration: none;
-    color: darkslategray;
-}
-
-.card .link_bud{
-    text-align: center;
-    margin-left: 10%;
-    margin-top: 14%;
-    background-color: #d2d2d2;
-    border-width: 2px;
-    border-style: solid;
-    width: 250px;
-    padding: 6px;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.card .link_bud a{
-    text-decoration: none;
-    color: darkslategray;
-}
-
-.row2{
-    display: flex;
-    justify-content: center;
-}
-
-.card {
-    justify-content: center;
-    background: #efefef;
-    width: 400px;
-    height: 400px;
-    margin: 30px;
-    border-radius: 10px;
-}
-
-.card .text{
-    color: darkslategray;
-    margin-top: 5%;
-}
-
-.card .image{
-    justify-content: center;
-    background-color: white;
-    height: 200px;
-    width: 300px;
-    margin-top: 9%;
-    margin-left: 9%;
-}
-
-.card .image .dogtreats {
-    height: 95%;
-    width: 60%;
-    margin-left: 20%;
-}
-
-.card .link_dogtreats{
-    text-align: center;
-    margin-left: 10%;
-    margin-top: 14%;
-    background-color: #d2d2d2;
-    border-width: 2px;
-    border-style: solid;
-    width: 250px;
-    padding: 6px;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.card .link_dogtreats a{
-    text-decoration: none;
-    color: darkslategray;
-}
-
-
-.card .image .oil {
-    height: 95%;
-    width: 60%;
-    margin-left: 20%;
-}
-
-.card .link_oil{
-    text-align: center;
-    margin-left: 10%;
-    margin-top: 20%;
-    background-color: #d2d2d2;
-    border-width: 2px;
-    border-style: solid;
-    width: 250px;
-    padding: 6px;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.card .link_oil a{
-    text-decoration: none;
-    color: darkslategray;
-}
-
-.card .image .gummies {
-    height: 95%;
-    width: 60%;
-    margin-left: 20%;
-}
-
-.card .link_gummies{
-    text-align: center;
-    margin-left: 10%;
-    margin-bottom: 100px;
-    background-color: #d2d2d2;
-    border-width: 2px;
-    border-style: solid;
-    width: 250px;
-    padding: 6px;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.card .link_gummies a{
-    text-decoration: none;
-    color: darkslategray;
-}
-
+/* ADAPTING TO DEVICES */
 @media (max-width: 1080px) {
     .nav {
         padding: 15px;
@@ -574,17 +351,6 @@ header {
         width: 280px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -177,8 +177,12 @@ header {
     color: white;
     padding-inline: 10px;
     font-weight: 600;
-
     margin-left: 10px;
+}
+
+.detail_box {
+    display: grid;
+    row-gap: 0.5rem;
 }
 
 /* LANGUAGE DROP-DOWN */

@@ -193,16 +193,15 @@ header {
     display: block;
     width: 100px;
     position: absolute;
-    right: 30px;
+    right: 50px;
     bottom: 0;
 }
 
 .selected-lang {
     cursor: pointer;
     display: flex;
-    justify-content: space-between;
     line-height: 1.2;
-    width: 100px;
+    width: 120px;
     height: 180px;
     padding-top: 150px;
 }
@@ -210,9 +209,10 @@ header {
 .selected-lang:before {
     content: '';
     display: block;
-    width: 25px;
+    width: 23px;
     height: 16px;
     background-image: url("/Images/spain.svg");
+    margin-right: 10px;
 }
 
 .lang-menu ul {
@@ -239,6 +239,7 @@ header {
 .lang-menu ul li a {
     width: 125px;
     display: block;
+    color: inherit;
     padding: 5px 10px;
 }
 
@@ -574,21 +575,3 @@ header {
         width: 280px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

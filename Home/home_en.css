@@ -200,7 +200,6 @@ header {
 .selected-lang {
     cursor: pointer;
     display: flex;
-    justify-content: space-between;
     line-height: 1.2;
     width: 100px;
     height: 180px;
@@ -210,9 +209,10 @@ header {
 .selected-lang:before {
     content: '';
     display: block;
-    width: 25px;
+    width: 21px;
     height: 16px;
-    background-image: url("/Images/spain.svg");
+    background-image: url("/Images/us.svg");
+    margin-right: 10px;
 }
 
 .lang-menu ul {
@@ -238,6 +238,7 @@ header {
 }
 .lang-menu ul li a {
     width: 125px;
+    color: inherit;
     display: block;
     padding: 5px 10px;
 }
@@ -257,7 +258,7 @@ header {
 }
 
 .us:before {
-    background-image: url("/Images/us.svg");
+    background-image: url("/Images/spain.svg");
 }
 
 .cat:before {
@@ -574,21 +575,3 @@ header {
         width: 280px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -200,7 +200,6 @@ header {
 .selected-lang {
     cursor: pointer;
     display: flex;
-    justify-content: space-between;
     line-height: 1.2;
     width: 100px;
     height: 180px;
@@ -212,7 +211,8 @@ header {
     display: block;
     width: 25px;
     height: 16px;
-    background-image: url("/Images/spain.svg");
+    background-image: url("/Images/cat.svg");
+    margin-right: 10px;
 }
 
 .lang-menu ul {
@@ -238,6 +238,7 @@ header {
 }
 .lang-menu ul li a {
     width: 125px;
+    color: inherit;
     display: block;
     padding: 5px 10px;
 }
@@ -257,11 +258,11 @@ header {
 }
 
 .us:before {
-    background-image: url("/Images/us.svg");
+    background-image: url("/Images/spain.svg");
 }
 
 .cat:before {
-    background-image: url("/Images/cat.svg");
+    background-image: url("/Images/us.svg");
 }
 /* -- END OF COMMON TO ALL -- */
 

@@ -85,6 +85,11 @@ header {
     right: 0;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
 .cart-product-title {
     text-align: left;
     fontsize: 1.5rem;

@@ -79,10 +79,19 @@ header {
     background: #9ea9a0;
     box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
     transition: 0.4s;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: 500px;
+    max-height: 50vh;
 }
 
 .cart.active{
     right: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
 }
 
 .cart-product-title {

@@ -56,6 +56,15 @@
       </ul>
     </div>
   </div>
+
+  <script>
+    let click = document.querySelector(".selected-lang");
+    let list = document.querySelector(".lang-menu ul");
+    click.addEventListener("selected-lang",()=>{
+      list.classList.toggle("newlist");
+    });
+
+  </script>
   <!-- Common for all -->
 
   <div class="text-container">

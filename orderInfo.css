@@ -64,7 +64,7 @@
 }
 
 .container form .row .col .flex{
-    display: flex;
+    display: block;
     gap:15px;
 }
 
@@ -90,4 +90,21 @@
 
 .container form .submit-btn:hover{
     background: #2ecc71;
+}
+
+.container form .back-btn{
+    width: 50%;
+
+    height: 30px;
+    font-size: 14px;
+    background: #ab0b0b;
+    color:#fff;
+    cursor: pointer;
+    position: relative;
+    margin-left: 165px;
+    margin-top: 20px;
+}
+
+.container form .back-btn:hover{
+    background: #e50707;
 }

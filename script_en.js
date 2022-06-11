@@ -3,6 +3,8 @@ const cartIcon = document.querySelector("li.active");
 const cart = document.querySelector(".cart");
 const closeCart = document.querySelector("#close-cart");
 
+let product = [];
+
 // Open Cart
 cartIcon.onclick = () => {
     cart.classList.add("active");
@@ -54,16 +56,17 @@ function ready() {
 
     // Buy Button Functionality
     document.getElementsByClassName("button-buy")[0].addEventListener("click", buyButtonClicked);
+
+    localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 function buyButtonClicked () {
-    alert("Your order is being placed")
+    window.location.href = "orderInfo_en.html";
     let cartContent = document.getElementsByClassName("cart-content")[0];
 
     while (cartContent.hasChildNodes()) {
         cartContent.removeChild(cartContent.firstChild);
     }
-
 }
 
 // Add Cart Clicked
@@ -126,6 +129,7 @@ function quantityChanged (event) {
     if (isNaN (input.value) || input.value <= 0) {
         input.value = 1
     }
+
     updateCartNumbers();
     updateTotal ();
 }
@@ -150,14 +154,9 @@ function updateTotal() {
     document.getElementsByClassName ("total-price")[0].innerText = total + "€";
 }
 
-/*function addCartNumbers() {
-    let cartNumber = document.querySelector(".cartNumber");
-    cartNumber.textContent ++;
-}*/
-
 function updateCartNumbers () {
-    let productNumbers = localStorage.getItem("cartNumbers")
-    productNumbers = parseInt(productNumbers);
+    /*let productNumbers = localStorage.getItem("cartNumbers")
+    productNumbers = parseInt(productNumbers);*/
     let cartNumber = document.querySelector(".cartNumber");
     let cartContent = document.getElementsByClassName ('cart-content')[0];
     let cartBoxes = cartContent.getElementsByClassName ('cart-box');
@@ -185,10 +184,17 @@ function updateCartNumbers () {
 }
 
 function onLoadCartNumbers () {
-    let productNumbers = localStorage.getItem("cartNumbers")
+    let productNumbers = localStorage.getItem("cartNumbers");
+    let productStorage = localStorage.getItem("products");
     productNumbers = parseInt(productNumbers);
 
     if (productNumbers) {
         document.querySelector(".cartNumber").innerText = productNumbers;
     }
+
+    /*for (let i = 0; i < productNumbers; i++) {
+        productStorage  add everything loaded onto shopping cart
+    }*/
 }
+
+

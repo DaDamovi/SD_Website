@@ -4,7 +4,7 @@ document.getElementsByClassName("back-btn")[0].addEventListener("click", backBut
 document.getElementsByClassName("submit-btn")[0].addEventListener("click", buyButtonClicked);
 
 function backButtonClicked () {
-    window.location.href = "home_en.html";
+    window.location.href = "index.html";
 }
 
 // PLACE PAYMENT HTML HERE

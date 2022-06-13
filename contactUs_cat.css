@@ -37,13 +37,13 @@ header {
     height: 150px;
 }
 
-.nav .logo {
+.logo {
     width: 140px;
     margin-left: 82px;
     cursor: pointer;
 }
 
-.nav ul {
+.mainmenu {
     flex: 1;
     margin-left: 100px;
     text-align: center;
@@ -235,7 +235,7 @@ input[type=number]::-webkit-outer-spin-button {
     position: absolute;
 }
 
-.lang-menu:hover ul {
+.languages.active {
     display: block;
 }
 
@@ -262,6 +262,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .lang-menu ul li:hover {
+    background-color: #a86666;
+    cursor: pointer;
+}
+
+.lang-menu ul li:active {
     background-color: #a86666;
     cursor: pointer;
 }
@@ -429,9 +434,127 @@ i.bx.bxs-map {
     margin-bottom: 70px;
 }
 
+/* RESIZEABLE */
 @media (max-width: 1080px) {
     .nav {
-        padding: 15px;
+        padding: 5px;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    .text-container {
+        margin-top: -250px;
+    }
+
+    .text-container h1 {
+        font-size: 60px;
+    }
+
+    .shop_container {
+        margin-top: -20px;
+    }
+
+    .mainmenu {
+        flex: 1;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .store {
+        width: 20px;
+    }
+
+    .mainmenu-items {
+        display: inline-block;
+        list-style: none;
+        width: 150px !important;
+        padding: 10px !important;
+        margin: 10px !important;
+        font-size: 20px !important;
+        cursor: pointer;
+    }
+
+    .cart-quantity {
+        border: 1px solid cadetblue;
+        outline-color: #007e32;
+        width: 2rem;
+        text-align: center;
+        font-size: 0.5rem;
+    }
+
+    .cartNumber {
+        width: 50px;
+        border: 1px solid #008000FF;
+        padding: 2px;
+        color: white;
+        padding-inline: 5px;
+        font-weight: 600;
+        margin-left: 5px;
+    }
+
+    .menu-bar {
+        width: 800px;
+        height: 60px;
+    }
+
+    .menu-bar ul li{
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .menu-bar ul li a{
+        font-size: 15px;
+    }
+
+    .flower {
+        width: 60px;
+        height: 40px;
+        font-weight: 500;
+        padding-top: 14px;
+    }
+
+    .vape {
+        width: 120px;
+        height: 40px;
+        font-weight: 700;
+        padding-top: 14px;
+    }
+
+    .cosmetics {
+        width: 120px;
+        height: 40px;
+        font-weight: 700;
+        padding-top: 14px;
+    }
+
+    .fisiotherapy {
+        width: 130px;
+        height: 40px;
+        font-weight: 700;
+        padding-top: 14px;
+    }
+
+    .smoking-accessories {
+        width: 220px;
+        height: 40px;
+        font-weight: 700;
+        padding-top: 14px;
+    }
+
+    .sub-menu.active {
+        display: block;
+        position:absolute;
+        background: #006527;
+        margin-top: 10px;
+        margin-left: 22px;
+        border-radius: 10px;
+        border-width: 2px;
+        border-style: solid;
+        width: 170px;
+        height: 350px;
     }
 
     section {
@@ -448,26 +571,274 @@ i.bx.bxs-map {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 800px) {
     .nav {
-        padding: 11px;
+        padding: 5px;
     }
 
-    .nav .logo {
+    .logo {
+        margin-left: 0;
+    }
+
+    .mainmenu {
+        flex: 1;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .text-container h1 {
+        font-size: 50px;
+    }
+
+    .mainmenu-items {
+        display: inline-block;
+        list-style: none;
+        width: 130px !important;
+        padding: 5px !important;
+        margin: 5px !important;
+        font-size: 20px !important;
+        cursor: pointer;
+    }
+
+    .cart-quantity {
+        border: 1px solid cadetblue;
+        outline-color: #007e32;
+        width: 2rem;
+        text-align: center;
+        font-size: 0.5rem;
+    }
+
+    .cartNumber {
+        width: 50px;
+        border: 1px solid #008000FF;
+        padding: 2px;
+        color: white;
+        padding-inline: 5px;
+        font-weight: 600;
+        margin-left: 5px;
+    }
+
+    .shop_container {
+        margin-top: -30px;
+    }
+
+    .menu-bar {
+        width: 600px;
+        height: 50px;
+    }
+
+    .menu-bar ul li{
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .menu-bar ul li a{
+        font-size: 12px;
+    }
+
+    .flower {
+        width: 50px;
+        height: 40px;
+        font-weight: 700;
+        padding-top: 14px;
+    }
+
+    .vape {
         width: 100px;
+        height: 40px;
+        font-weight: 700;
+        padding-top: 14px;
     }
 
-    .nav ul li a  {
-        width: 320px;
+    .cosmetics {
+        width: 100px;
+        height: 40px;
+        font-weight: 700;
+        padding-top: 14px;
     }
-}
 
-@media (max-width: 400px) {
+    .fisiotherapy {
+        width: 100px;
+        height: 40px;
+        font-weight: 700;
+        padding-top: 14px;
+    }
+
+    .smoking-accessories {
+        width: 170px;
+        height: 40px;
+        font-weight: 700;
+        padding-top: 14px;
+    }
+
+    .sub-menu.active {
+        display: block;
+        position:absolute;
+        background: #006527;
+        margin-top: 10px;
+        margin-left: 33px;
+        border-radius: 10px;
+        border-width: 2px;
+        border-style: solid;
+        width: 120px;
+        height: 280px;
+    }
+
+    .sub-menu-list-items{
+        width: 90px;
+        height: 40px;
+        margin-top: 20px;
+        padding-top: 13px;
+        font-weight: 1000;
+        border-bottom: 1px solid #ffffff;
+        background: #006527;
+    }
+
+    section {
+        padding: 3rem 0 2rem;
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 90%;
+    }
+
     .shop {
-        margin-top: 1rem !important;
+        margin-top: 2rem !important;
     }
 
     .cart {
-        width: 280px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav {
+        padding: 5px;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    .mainmenu {
+        flex: 1;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .mainmenu-items {
+        display: inline-block;
+        list-style: none;
+        width: 120px !important;
+        padding: 5px !important;
+        margin: 5px !important;
+        font-size: 20px !important;
+        cursor: pointer;
+    }
+
+    .cart-quantity {
+        border: 1px solid cadetblue;
+        outline-color: #007e32;
+        width: 2rem;
+        text-align: center;
+        font-size: 0.5rem;
+    }
+
+    .cartNumber {
+        width: 50px;
+        border: 1px solid #008000FF;
+        padding: 2px;
+        color: white;
+        padding-inline: 5px;
+        font-weight: 600;
+        margin-left: 5px;
+    }
+
+    .menu-bar {
+        width: 450px;
+        height: 35px;
+    }
+
+    .menu-bar ul li{
+        margin-top: 3px;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    .menu-bar ul li a{
+        font-size: 10px;
+    }
+
+    .flower {
+        width: 40px;
+        height: 30px;
+        font-weight: 700;
+        padding-top: 7px;
+    }
+
+    .vape {
+        width: 50px;
+        height: 30px;
+        font-weight: 700;
+        padding-top: 7px;
+    }
+
+    .cosmetics {
+        width: 70px;
+        height: 30px;
+        font-weight: 700;
+        padding-top: 7px;
+    }
+
+    .fisiotherapy {
+        width: 70px;
+        height: 30px;
+        font-weight: 700;
+        padding-top: 7px;
+    }
+
+    .smoking-accessories {
+        width: 170px;
+        height: 30px;
+        font-weight: 700;
+        padding-top: 7px;
+    }
+
+    .sub-menu.active {
+        display: block;
+        position:absolute;
+        background: #006527;
+        margin-top: 10px;
+        margin-left: 33px;
+        border-radius: 10px;
+        border-width: 2px;
+        border-style: solid;
+        width: 120px;
+        height: 265px;
+    }
+
+    .sub-menu-list-items{
+        width: 90px;
+        height: 40px;
+        margin-top: 20px;
+        padding-top: 13px;
+        font-weight: 1000;
+        border-bottom: 1px solid #ffffff;
+        background: #006527;
+    }
+
+    section {
+        padding: 3rem 0 2rem;
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .shop {
+        margin-top: 1rem !important;
     }
 }

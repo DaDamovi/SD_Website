@@ -3,6 +3,16 @@ const cartIcon = document.querySelector("li.active");
 const cart = document.querySelector(".cart");
 const closeCart = document.querySelector("#close-cart");
 
+// Language
+let langMenu = document.querySelector(".selected-lang");
+let language = document.querySelector(".languages");
+
+// Sub-menu
+let subMenuClick = document.querySelector(".smoking-accessories");
+let subMenu = document.querySelector(".sub-menu");
+let subMenuList = document.querySelector(".sub-menu-list")
+let subMenuListItems = document.querySelector(".-sub-menu-list-items");
+
 let product = [];
 
 // Open Cart
@@ -14,6 +24,31 @@ cartIcon.onclick = () => {
 closeCart.onclick = () => {
     cart.classList.remove("active");
 };
+
+// Open/Close language menu
+langMenu.onclick = () => {
+
+    if (language.classList.contains("active")) {
+        language.classList.remove("active");
+    }
+    else {
+        language.classList.add("active");
+    }
+}
+
+// Open/Close language menu
+subMenuClick.onclick = () => {
+    if (subMenu.classList.contains("active")) {
+        subMenu.classList.remove("active");
+        subMenuList.classList.remove("active");
+        subMenuListItems.classList.remove("active");
+    }
+    else {
+        subMenu.classList.add("active");
+        subMenuList.classList.add("active");
+        subMenuListItems.classList.remove("active");
+    }
+}
 
 // Cart Working JS
 if (document.readyState == "loading") {

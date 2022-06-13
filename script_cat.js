@@ -3,7 +3,19 @@ const cartIcon = document.querySelector("li.active");
 const cart = document.querySelector(".cart");
 const closeCart = document.querySelector("#close-cart");
 
+// Language
+let langMenu = document.querySelector(".selected-lang");
+let language = document.querySelector(".languages");
+
+// Sub-menu
+let subMenuClick = document.querySelector(".smoking-accessories");
+let subMenu = document.querySelector(".sub-menu");
+let subMenuList = document.querySelector(".sub-menu-list")
+let subMenuListItems = document.querySelector(".-sub-menu-list-items");
+
+
 let product = [];
+let products = [];
 
 // Open Cart
 cartIcon.onclick = () => {
@@ -15,10 +27,36 @@ closeCart.onclick = () => {
     cart.classList.remove("active");
 };
 
+// Open/Close language menu
+langMenu.onclick = () => {
+
+    if (language.classList.contains("active")) {
+        language.classList.remove("active");
+    }
+    else {
+        language.classList.add("active");
+    }
+}
+
+// Open/Close language menu
+subMenuClick.onclick = () => {
+    if (subMenu.classList.contains("active")) {
+        subMenu.classList.remove("active");
+        subMenuList.classList.remove("active");
+        subMenuListItems.classList.remove("active");
+    }
+    else {
+        subMenu.classList.add("active");
+        subMenuList.classList.add("active");
+        subMenuListItems.classList.remove("active");
+    }
+}
+
 // Cart Working JS
 if (document.readyState == "loading") {
     document.addEventListener("DOMContentLoaded", ready);
 } else {
+    onLoadCartNumbers();
     ready();
 }
 
@@ -26,7 +64,6 @@ if (document.readyState == "loading") {
 function ready() {
 
     updateTotal();
-    onLoadCartNumbers();
     //Remove Items From Cart
     let removeCartButtons = document.getElementsByClassName("cart-remove");
 
@@ -57,7 +94,6 @@ function ready() {
     // Buy Button Functionality
     document.getElementsByClassName("button-buy")[0].addEventListener("click", buyButtonClicked);
 
-    localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 function buyButtonClicked () {
@@ -94,9 +130,14 @@ function addProductToCart (title, price, productImage) {
         if (cartItemsNames[i].innerText === title) {
             quantityInputs[i].value ++;
             updateTotal();
+            product.push(title, price, productImage, +1);
+            products.push(product);
+            localStorage.setItem('cart', JSON.stringify(products));
             return;
         }
     }
+    product.push(title, price, productImage);
+    localStorage.setItem('cart', JSON.stringify(product));
     let cartBoxContent =
         `              <img src="${productImage}" alt="" class="cart-image">
 
@@ -155,8 +196,7 @@ function updateTotal() {
 }
 
 function updateCartNumbers () {
-    /*let productNumbers = localStorage.getItem("cartNumbers")
-    productNumbers = parseInt(productNumbers);*/
+
     let cartNumber = document.querySelector(".cartNumber");
     let cartContent = document.getElementsByClassName ('cart-content')[0];
     let cartBoxes = cartContent.getElementsByClassName ('cart-box');
@@ -172,29 +212,24 @@ function updateCartNumbers () {
 
     cartNumber.innerText = total;
 
-    /*productNumbers = total;
+    productNumbers = total;
     if (productNumbers) {
         localStorage.setItem("cartNumbers", productNumbers);
     }
-    else {
-        localStorage.setItem("cartNumbers", 1);
-    }
-
-    cartNumber.innerText = productNumbers;*/
 }
 
 function onLoadCartNumbers () {
-    let productNumbers = localStorage.getItem("cartNumbers");
+    let productNumbers = parseInt(localStorage.getItem ("cartNumbers"));
     let productStorage = localStorage.getItem("products");
-    productNumbers = parseInt(productNumbers);
 
-    if (productNumbers) {
+    if (productNumbers > 1) {
         document.querySelector(".cartNumber").innerText = productNumbers;
     }
-
-    /*for (let i = 0; i < productNumbers; i++) {
-        productStorage  add everything loaded onto shopping cart
-    }*/
+    else {
+        localStorage.setItem("cartNumbers", "0");
+    }
 }
+
+
 
 

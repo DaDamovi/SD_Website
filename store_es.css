@@ -39,13 +39,13 @@ header {
 
 .logo {
     width: 140px;
-    margin-left: 82px;
+    margin-left: 42px;
     cursor: pointer;
 }
 
 .mainmenu {
     flex: 1;
-    margin-left: 70px;
+    margin-left: 100px;
     text-align: center;
 }
 
@@ -449,7 +449,7 @@ header {
     padding: 4rem 0 3rem;
 }
 
-img{
+img {
     width: 100%;
 }
 
@@ -462,7 +462,7 @@ img{
 
 .shop_content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(180px, auto));
     gap: 1.5rem;
 }
 

@@ -39,7 +39,7 @@ header {
 
 .logo {
     width: 140px;
-    margin-left: 82px;
+    margin-left: 42px;
     cursor: pointer;
 }
 
@@ -338,18 +338,25 @@ i.bx.bx-time-five {
     margin-top: 15px;
 }
 
-.week-container {
-    margin-top: 15px;
-    font-weight: 900;
-    font-family: "Lucida Console", "Courier New", monospace;
-}
-.saturday-container {
+.mon-container {
     margin-top: 15px;
     font-weight: 900;
     font-family: "Lucida Console", "Courier New", monospace;
 }
 
-.sunday-container {
+.tues-wed-container {
+    margin-top: 15px;
+    font-weight: 900;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.thu-fri-container {
+    margin-top: 15px;
+    font-weight: 900;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.weekend-container-container {
     margin-top: 15px;
     font-weight: 900;
     font-family: "Lucida Console", "Courier New", monospace;
@@ -422,7 +429,7 @@ i.bx.bx-envelope {
 
 .maps-container {
     margin-top: -20px;
-    margin-left: 10px;
+    margin-left: 50px;
 }
 
 i.bx.bxs-map {
@@ -432,6 +439,18 @@ i.bx.bxs-map {
     margin-top: 60px;
     font-size: 40px;
     margin-bottom: 70px;
+}
+
+.street {
+    font-weight: 900;
+    font-size: 17px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    margin-bottom: 60px;
+    padding: 5px;
+    border-bottom: 1px solid #ffffff;
+    width: 44%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* RESIZEABLE */
